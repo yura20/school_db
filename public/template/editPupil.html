@@ -1,0 +1,21 @@
+<form name='form9' id="list">
+        <select name="select_list">
+            <option value="0" selected>- Select Class - </option>
+            <option value="{{a.id}}" ng-repeat="a in classroom" class='friends'>{{a.name}}</option>
+        </select>
+   </form>    
+       <form name="editPupilForm" novalidate>
+        <input type="text" name="editNamePupil" ng-model="editNamePupil" required>
+
+        <span style="color:red" ng-show="editPupilForm.editNamePupil.$touched && editPupilForm.editNamePupil.$invalid">
+<!--                перевірка на пусте поле   -->
+                    <span ng-show="editPupilForm.editNamePupil.$error.required">Пусте поле</span>
+        </span>
+
+        <input type="text" name="editSnamePupil" ng-model="editSnamePupil" required>
+        <span style="color:red" ng-show="editPupilForm.editSnamePupil.$touched && editPupilForm.editSnamePupil.$invalid">
+<!--                перевірка на пусте поле   -->
+                    <span ng-show="editPupilForm.editSnamePupil.$error.required">Пусте поле</span>
+        </span>
+        <input type="button" ng-click="editPupilp()" value="Редагувати Учня" ng-disabled="editPupilForm.$invalid">
+	</form>

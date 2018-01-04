@@ -1,0 +1,16 @@
+<div ng-show='searchStatus'>
+<button ng-click="closeSearch()">Close</button>
+<input type="text" ng-model="searchName">
+<!--<input type="text" ng-model="searchSurname">-->
+<button ng-click='searchLol()'>Search</button>
+<div >
+    <table border="1" align="center" class="table-hover">
+        <tr ng-repeat="a in pupilsB track by $index">
+            <td>{{a.name}}</td>
+            <td>{{a.sname}}</td>
+        </tr>
+    </table>
+</div>
+</div>
+
+

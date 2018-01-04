@@ -1,0 +1,16 @@
+<form name='form8' id="list">
+	<select name="select_list">
+		<option value="0" selected>- Select Teacher - </option>
+		<option value="{{a.id}}" ng-repeat="a in teachers" class='friends'>{{a.name}} {{a.sname}}</option>
+	</select>
+</form>
+   <form name="editClassForm" novalidate>
+	<input type="text" name="editNameClass" ng-model="editNameClass" required>
+
+	<span style="color:red" ng-show="editClassForm.editNameClass.$touched && editClassForm.editNameClass.$invalid">
+<!--                перевірка на пусте поле   -->
+				<span ng-show="editClassForm.editNameClass.$error.required">Пусте поле</span>
+	</span>
+
+	<input type="button" ng-click="editClass()" value="Редагувати клас" ng-disabled="editClassForm.$invalid">
+</form>

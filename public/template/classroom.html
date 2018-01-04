@@ -1,0 +1,15 @@
+<div ng-show="classroomStatus">
+    <input type="button" value="AddClass" class="btn btn-success" ng-click="addClass()">
+    <input type="button" value="Close" class="btn btn-danger" ng-click="closeClassroom()">
+    <table border="1" align="center" class="table-hover">
+        <tr ng-repeat="a in classroom2 track by $index">
+<!--            <td>{{a.id}}</td>-->
+            <td>{{a.class}}</td>
+            <td>{{a.name}}</td>
+            <td>{{a.sname}}</td>
+            <td><input type="button" class="btn btn-danger" value="Видалити" ng-click="deleteClassroom(a.id)"></td>
+            <td><input type="button" class="btn btn-warning" value="Редагувати" ng-click="editClassroom(a.id,a.class)"></td>
+             <td><input type="button" class="btn btn-info" value="Перейти" ng-click="gotoClassroom(a.id, a.id_t)"></td>
+        </tr>
+    </table>
+</div>

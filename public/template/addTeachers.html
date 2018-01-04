@@ -1,0 +1,17 @@
+<form name="addTeacherForm" novalidate>
+    <input type="text" name="nameTeacher" ng-model="nameTeacher" required>
+
+
+    <span style="color:red" ng-show="addTeacherForm.nameTeacher.$touched && addTeacherForm.nameTeacher.$invalid">
+<!--                перевірка на пусте поле   -->
+                    <span ng-show="addTeacherForm.nameTeacher.$error.required">Пусте поле</span>
+    </span>
+
+    <input type="text" name="snameTeacher" ng-model="snameTeacher" required>
+
+    <span style="color:red" ng-show="addTeacherForm.snameTeacher.$touched && addTeacherForm.snameTeacher.$invalid">
+<!--                перевірка на пусте поле   -->
+                    <span ng-show="addTeacherForm.snameTeacher.$error.required">Пусте поле</span>
+    </span>
+    <input type="button" ng-click="addteach()" ng-disabled="addTeacherForm.$invalid" value="Додати вчителя">
+</form>

@@ -1,0 +1,14 @@
+<div ng-show="pupilsStatus">
+    <input type="button" value="Add Pupil" class="btn btn-success" ng-click="addNewP()">
+    <input type="button" value="Close" class="btn btn-danger" ng-click="closePupils()">
+    <table border="1" align="center" class="table-hover">
+        <tr ng-repeat="a in allpupils track by $index">
+<!--            <td>{{a.id}}</td>-->
+            <td>{{a.class}}</td>
+            <td>{{a.name}}</td>
+            <td>{{a.sname}}</td>
+            <td><input type="button" class="btn btn-danger" value="Видалити" ng-click="deletePupil(a.id)"></td>
+            <td><input type="button" class="btn btn-warning" value="Редагувати" ng-click="editPupil(a.id, a.name, a.sname)"></td>
+        </tr>
+    </table>
+</div>

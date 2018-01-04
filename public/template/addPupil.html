@@ -1,0 +1,23 @@
+<form name='form10' id="list">
+        <select name="select_list">
+            <option value="0" selected>- Select Class - </option>
+            <option value="{{a.id}}" ng-repeat="a in classroom" class='friends'>{{a.name}}</option>
+        </select>
+   </form>    
+	<form name="addPupilForm" novalidate>
+		<input type="text" name="namePupil" ng-model="namePupil" required>
+
+
+		<span style="color:red" ng-show="addPupilForm.namePupil.$touched && addPupilForm.namePupil.$invalid">
+	<!--                перевірка на пусте поле   -->
+						<span ng-show="addPupilForm.namePupil.$error.required">Пусте поле</span>
+		</span>
+		<input type="text" name="snamePupil" ng-model="snamePupil" required>
+
+
+		<span style="color:red" ng-show="addPupilForm.snamePupil.$touched && addPupilForm.snamePupil.$invalid">
+	<!--                перевірка на пусте поле   -->
+						<span ng-show="addPupilForm.snamePupil.$error.required">Пусте поле</span>
+		</span>
+		<input type="button" ng-click="addPupil()" ng-disabled="addClassForm.$invalid" value="Додати учня">
+	</form>
