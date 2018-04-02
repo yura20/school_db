@@ -1,4 +1,11 @@
-School DB
+# School DB
 
-1) npm i
-2) node server
+## Deploy
+
+1. `npm i`
+
+1. `knex migrate:latest`
+
+1. `knex seed:run`
+
+1. `node server`
